@@ -61,15 +61,19 @@ nav li a:hover{
   justify-content: space-around;
   margin-top: 50px;
   margin-left: 50px;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .item a{
   text-decoration: none;
 }
 .item h5 {
   text-align: center;
+  margin-right: 150px;
 }
 .item p{
   text-align: center;
+  margin-right: 150px;
 }
 #all{
   height: 100%;

@@ -1,8 +1,6 @@
 let firstnum;
 let secondnum;
-let operate = '';
-
-
+var operate = '';
 
 let setnum = function (n) {
     let screen = document.getElementById('screen');
@@ -20,21 +18,28 @@ let setoper = function (n){
 };
 
 let solve = function(){
+    
     let screen = document.getElementById('screen');
     secondnum = screen.value;
-    let result = 0;
-    if(operate === '+'){
-        result = firstnum + secondnum;
-    } 
-    if(operate === '-'){
-        result = firstnum - secondnum;
-    }
-    if(operate === '*'){
-        result = firstnum * secondnum;
-    }
-    if(operate === '/'){
-        result = firstnum / secondnum;
-    }
+    console.log(secondnum)
+    // let result = 0;
+    // if(operate === '+'){
+    //     result = firstnum + secondnum;
+    // } 
+    // if(operate === '-'){
+    //     result = firstnum - secondnum;
+    // }
+    // if(operate === '*'){
+    //     result = firstnum * secondnum;
+    // }
+    // if(operate === '/'){
+    //     result = firstnum / secondnum;
+    // }
+
+    let result = eval(secondnum)
+    console.log(result);
+    let screen = document.getElementById('screen');
+    screen.value = result;
 };
 
 let clr = function(){

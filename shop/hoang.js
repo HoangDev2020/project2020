@@ -167,5 +167,25 @@ function gerProduct(){
 };
 gerProduct();
 
+let cart = document.getElementById('cart');
+let count;
+if(localStorage.length != 0){
+    count = localStorage.getItem('numberOfProduct');
+    cart.textContent = count;
+}else{
+    localStorage.setItem('numberOfProduct', 0);
+}
+
+
+
+let items = document.getElementsByClassName('item')
+for(let i = 0; i < items.length; i++){
+    items[i].addEventListener('click', () => {
+        count++;
+        localStorage.setItem('numberOfProduct', count);
+        cart.textContent = localStorage.getItem('numberOfProduct');
+    });
+};
+
 
 
