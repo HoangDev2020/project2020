@@ -152,52 +152,5 @@ let productions = [
 ];
 
 
-let container = document.getElementById('container');
-function gerProduct() {
-    for (let i = 0; i < productions.length; i++) {
-        let productEle = `<div class="item">
-                            
-                            <img src="${productions[i].img}">
-                            <p> ${productions[i].name}</p>
-                            <h5>Giá: ${productions[i].cost}</h5>
-                            
-                            <button class="btn_add">Thêm vào giỏ</button>
-                            <button class="btn_remove">Ra khỏi giỏ</button>
-                        </div>`;
-        container.insertAdjacentHTML('beforeend', productEle);
-    };
-};
-gerProduct();
-
-
-function add_remove() {
-    let cart = document.getElementById('cart');
-    let count;
-    if (localStorage.length != 0) {
-        count = localStorage.getItem('numberOfProduct');
-        cart.textContent = 'Giỏ hàng' + ' ' + '(' + count + ')';
-    } else {
-        localStorage.setItem('numberOfProduct', 0);
-    }
-
-    let btn_add = document.getElementsByClassName('btn_add')
-    for (let i = 0; i < btn_add.length; i++) {
-        btn_add[i].addEventListener('click', () => {
-            count++;
-            localStorage.setItem('numberOfProduct', count);
-            cart.textContent = 'Giỏ hàng' + ' ' + '(' + localStorage.getItem('numberOfProduct') + ')';
-        });
-    };
-
-    let btn_remove = document.getElementsByClassName('btn_remove');
-    for (let i = 0; i < btn_remove.length; i++) {
-        btn_remove[i].addEventListener('click', () => {
-            count--;
-            localStorage.setItem('numberOfProduct', count);
-            cart.textContent = 'Giỏ hàng' + ' ' + '(' + localStorage.getItem('numberOfProduct') + ')';
-        })
-    };
-};
-add_remove();
 
 

@@ -86,7 +86,12 @@ nav li a:hover{
   height: 100%;
   width: 100%;
 }
-
+.btn_add{
+  margin-left: 20px;
+}
+.btn_remove{
+  margin-left: 20px;
+}
 
 footer{
   width: 100%;
