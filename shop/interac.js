@@ -1,10 +1,11 @@
 localStorage.setItem('indexOfChoosenProduct', [])
+
 let container = document.getElementById('container');
 function gerProduct() {
     for (let i = 0; i < productions.length; i++) {
         let productEle = `<div class="item">
                             
-                            <img src="${productions[i].img}" class="toCart">
+                            <img src="${productions[i].img}">
                             <p class="toCart"> ${productions[i].name}</p>
                             <h5 class="toCart">Giá: ${productions[i].cost}</h5>
                             
@@ -16,7 +17,7 @@ function gerProduct() {
 };
 gerProduct();
 
-
+let value = localStorage.getItem('indexOfChoosenProduct');
 function add_remove() {
     let cart = document.getElementById('cart');
     let count;
@@ -30,7 +31,7 @@ function add_remove() {
     let btn_add = document.getElementsByClassName('btn_add')
     for (let i = 0; i < btn_add.length; i++) {
         btn_add[i].addEventListener('click', function() {
-            let value = localStorage.getItem('indexOfChoosenProduct');
+            let value = localStorage.getItem('indexOfChoosenProduct')
             btn_add[i].setAttribute('disabled', 'true');
             if(value == ''){
                 value +=i;
@@ -38,6 +39,7 @@ function add_remove() {
                 value += `,${i}`;
             }
             localStorage.setItem('indexOfChoosenProduct', value);
+            
             
             count++;
             localStorage.setItem('numberOfProduct', count);
@@ -49,6 +51,8 @@ function add_remove() {
     let btn_remove = document.getElementsByClassName('btn_remove');
     for (let i = 0; i < btn_remove.length; i++) {
         btn_remove[i].addEventListener('click', () => {
+            btn_remove[i].setAttribute('disabled', 'true')
+            
             if (count != 0) {
                 count--;
             localStorage.setItem('numberOfProduct', count);
@@ -66,3 +70,6 @@ let toCart = document.getElementById('cart');
 toCart.addEventListener('click', () => {
     window.open('cart.html');
 });
+
+
+
