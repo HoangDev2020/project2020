@@ -149,8 +149,5 @@ let productions = [
         cost: '75.000đ',
         img: 'https://product.hstatic.net/1000041114/product/selsun-100-01_596f1a3c7df64b5dafbe26ab21bd3367_master.jpg',
     },
-];
-
-
-
+ ];
 

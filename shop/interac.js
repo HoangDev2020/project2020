@@ -51,7 +51,7 @@ function add_remove() {
     let btn_remove = document.getElementsByClassName('btn_remove');
     for (let i = 0; i < btn_remove.length; i++) {
         btn_remove[i].addEventListener('click', () => {
-            btn_remove[i].setAttribute('disabled', 'true')
+            
             
             if (count != 0) {
                 count--;

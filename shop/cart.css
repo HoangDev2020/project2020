@@ -1,0 +1,23 @@
+
+
+
+
+
+.item img{
+    width: 270px;
+    height: 270px;
+    border: 1px solid black;
+}
+#content{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.item p{
+    text-align: center;
+    
+}
+.item h5{
+    text-align: center;
+}
