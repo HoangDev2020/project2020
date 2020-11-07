@@ -1,4 +1,4 @@
-let productions = [
+let data = [
     {
         name: 'Nón bảo hiểm 3/4 Napoli SH free size',
         cost: '299.000đ',

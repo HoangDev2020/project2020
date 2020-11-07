@@ -1,13 +1,13 @@
 localStorage.setItem('indexOfChoosenProduct', [])
 
 let container = document.getElementById('container');
-function gerProduct() {
-    for (let i = 0; i < productions.length; i++) {
+function gerProduct(data) {
+    for (let i = 0; i < data.length; i++) {
         let productEle = `<div class="item">
                             
-                            <img src="${productions[i].img}">
-                            <p class="toCart"> ${productions[i].name}</p>
-                            <h5 class="toCart">Giá: ${productions[i].cost}</h5>
+                            <img src="${data[i].avatar}">
+                            <p class="toCart">${data[i].name}</p>
+                            <h5 class="toCart">Giá:${data[i].cost}.000</h5>
                             
                             <button class="btn_add" >Thêm vào giỏ</button>
                             <button class="btn_remove">Ra khỏi giỏ</button>
@@ -15,7 +15,7 @@ function gerProduct() {
         container.insertAdjacentHTML('beforeend', productEle);
     };
 };
-gerProduct();
+// gerProduct();
 
 let value = localStorage.getItem('indexOfChoosenProduct');
 function add_remove() {
@@ -71,5 +71,7 @@ toCart.addEventListener('click', () => {
     window.open('cart.html');
 });
 
-
+fetch('https://5f9e30996ee5fa00168a4eb5.mockapi.io/api/new' )
+    .then(response => response.json())
+    .then(data => gerProduct(data));
 

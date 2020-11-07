@@ -13,6 +13,8 @@
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
+    background-image: url(../img/backgroundcarts.jpg);
+    height: 100%;
 }
 .item p{
     text-align: center;
@@ -20,4 +22,11 @@
 }
 .item h5{
     text-align: center;
+}
+#texthead{
+    font-style: italic;
+    margin-top: 1px;
+    text-align: center;
+    color: cyan;
+    font-size: 70px;
 }
