@@ -28,21 +28,24 @@ body{
                  0 5px 10px rgba(0,0,0,.25),
                  0 10px 10px rgba(0,0,0,.2),
                  0 20px 20px rgba(0,0,0,.15);
-  filter: contrast(110%) brightness(190%);
-  animation: light 7s infinite linear;
-  background: 
+  /* filter: contrast(110%) brightness(190%); */
+  /* animation: light 7s infinite linear; */
+  animation: textanimation 4s infinite linear;
+  /* background: 
     radial-gradient(circle, orangered, transparent 30%) 0 0 / 25% 25%, 
     radial-gradient(circle, orangered, rgb(236, 141, 17) 25%) 60% 40% / 12.5% 12.5%;
-  top: -100%; left: -100%; right: 150%; bottom: 100%;
+  top: -100%; left: -100%; right: 150%; bottom: 100%; */
   /* mix-blend-mode: color-dodge; */
 }
-@keyframes light {
+/* @keyframes light {
   100% {
     transform: translate3d(60%, 40%, 0);
   }
+} */
+@keyframes textanimation{
   25%{color: yellow;}
-  25%{color: rgb(128, 75, 6);}
-  25%{color: rgb(250, 193, 89);}
+  25%{color: black;}
+  25%{color: blue;}
   25%{color: rgb(170, 49, 5);}
 }
 
@@ -82,8 +85,29 @@ nav li a:hover{
   /* -moz-transition: width 0.3s ease-in-out; */
 }
 .item img:hover{
-  
   width: 280px;
+}
+.btn_add{
+  height: 50px;
+  color: red;
+  background-color: yellow;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out;
+}
+.btn_add:hover{
+  background-color: red;
+  color: yellow;
+}
+.btn_remove{
+  height: 50px;
+  color: red;
+  background-color: yellow;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out;
+}
+.btn_remove:hover{
+  background-color: red;
+  color: yellow;
 }
 #container{
   display: grid;
