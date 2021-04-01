@@ -12,3 +12,12 @@ py manage.py makemigrations
 django account:
 username: 'hoang'
 pass: 'hoang9az123'
+
+pip install djangorestframework
+create serializers.py in character
+
+admin.py
+models.py
+view.py
+url.py
+create urls.py in character
