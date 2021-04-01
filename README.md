@@ -7,3 +7,8 @@ django-admin startapp character
 py manage.py runserver
 npm install
 
+py manage.py makemigrations
+
+django account:
+username: 'hoang'
+pass: 'hoang9az123'
